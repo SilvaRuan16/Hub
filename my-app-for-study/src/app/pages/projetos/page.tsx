@@ -47,15 +47,26 @@ export default function Projetos() {
         }}
       />
 
-      <div className="text-black w-full h-full flex flex-col justify-center items-center p-3">
-        {showMessage && (<AlertMessage/>)}
-        <div className="text-black bg-gray-100 p-3 m-3 min-w-[70%] max-w-[70%] min-h-[70%] flex flex-wrap justify-evenly mx-auto my-auto shadow-sm rounded-lg gap-x-6">
-          <div className="w-[300px] h-[200px] bg-gray-400 p-2 ml-2 rounded-lg shadow-sm flex flex-col"></div>
-          <div className="w-[300px] h-[200px] bg-gray-400 p-2 ml-2 rounded-lg shadow-sm flex flex-col"></div>
-          <div className="w-[300px] h-[200px] bg-gray-400 p-2 ml-2 rounded-lg shadow-sm flex flex-col"></div>
-          <div className="w-[300px] h-[200px] bg-gray-400 p-2 ml-2 rounded-lg shadow-sm flex flex-col"></div>
-          <div className="w-[300px] h-[200px] bg-gray-400 p-2 ml-2 rounded-lg shadow-sm flex flex-col"></div>
-          
+      <div className="text-black w-full h-full flex flex-col justify-center items-center pt-3">
+        {showMessage && (<AlertMessage />)}
+        <div className="w-full h-full bg-gray-200 rounded-md shadow-md flex flex-row">
+          <div className="bg-white w-[15%] p-3 m-3 rounded-md shadow-md flex flex-col">
+            <div className="p-3 m-3 rounded-md flex flex-col">
+              <Button className={"bg-green-500 m-1 p-3 rounded-md shadow-md text-white"} value={"Adicionar"} onClick={() => { }}></Button>
+              <Button className={"bg-yellow-500 m-1 p-3 rounded-md shadow-md text-white"} value={"Atualizar"} onClick={() => { }}></Button>
+              <Button className={"bg-red-500 m-1 p-3 rounded-md shadow-md text-white"} value={"Excluir"} onClick={() => { }}></Button>
+            </div>
+            <hr />
+            <div className="mt-5">
+              <p className="text-center text-xl">Status</p>
+              <ul className="p-3 mt-1">
+                <li className="p-3 flex flex-row justify-between">Finalizado <div className="w-2.5 h-2.5 rounded-md bg-green-500"></div></li>
+                <li className="p-3 flex flex-row justify-between">Em andamento <div className="w-2.5 h-2.5 rounded-md bg-yellow-500"></div></li>
+                <li className="p-3 flex flex-row justify-between">Em planejamento <div className="w-2.5 h-2.5 rounded-md bg-blue-500"></div></li>
+              </ul>
+            </div>
+          </div>
+          <div className="bg-white w-full p-3 m-3 rounded-md shadow-md"></div>
         </div>
       </div>
 

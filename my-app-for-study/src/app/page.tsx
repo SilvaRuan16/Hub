@@ -50,8 +50,8 @@ export default function Home() {
       <div className="text-black w-full h-full flex flex-col items-center-safe p-3">
         {showMessage && (<AlertMessage />)}
         <div className="w-full max-w-[800px] h-[100px] bg-gradient-to-r from-blue-100 to-blue-200 mt-[10%] rounded-md flex justify-center items-center shadow-md">
-          <div className="typing-container">
-            <span className="typing">Bem Vindo</span>
+          <div className="text-[50px] font-bold text-[#1a202c] whitespace-nowrap overflow-hidden border-[#1a202c] w-fit">
+            <span>Bem Vindo</span>
           </div>
         </div>
         <div className="bg-blue-50 w-[60%] h-[30%] mt-[100px] p-3 shadow-md rounded-md text-xl text-justify">
