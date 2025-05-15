@@ -46,31 +46,37 @@ export default function Projetos() {
           )
         }}
       />
-
-      <div className="text-black w-full h-full flex flex-col justify-center items-center pt-3">
+      <div className="text-black w-full h-full sm:h-[90%] flex flex-col items-center pt-3">
         {showMessage && (<AlertMessage />)}
-        <div className="w-full h-full bg-gray-200 rounded-md shadow-md flex flex-col sm:flex-row">
-          {/* Sidebar */}
-          <div className="bg-white sm:w-[20%] p-3 m-3 rounded-md shadow-md flex flex-col">
-            <div className="p-3 m-3 rounded-md flex flex-col">
-              <Button className={"bg-green-500 m-1 p-3 rounded-md shadow-md text-white"} value={"Adicionar"} onClick={() => { }}></Button>
-              <Button className={"bg-yellow-500 m-1 p-3 rounded-md shadow-md text-white"} value={"Atualizar"} onClick={() => { }}></Button>
-              <Button className={"bg-red-500 m-1 p-3 rounded-md shadow-md text-white"} value={"Excluir"} onClick={() => { }}></Button>
+        <div className="h-[150px] w-full mb-3 p-3 text-justify text-xl">
+          Aqui estão todos os meus projetos em desenvolvimento, incluindo pessoais, acadêmicos e ideias em estágio inicial. Alguns deles têm potencial para investimento e foco em crescimento.
+          Abaixo, serão exibidos alguns cards com informações resumidas de cada projeto. Ao clicar em um card, você poderá visualizar detalhes adicionais, como descrição completa, funcionalidades e outras informações relevantes.
+          Sempre que possível, será disponibilizado o link para o repositório no GitHub. Caso um projeto não possua um link, é provável que o repositório seja privado devido à intenção de investimento e ao foco em atrair clientes e usuários.
+        </div>
+        <div className="w-full h-full sm:h-[80%] bg-gray-200 rounded-md shadow-md flex flex-col sm:flex-row">
+          <div className="bg-white sm:w-full p-3 m-3 rounded-md shadow-md max-h-[650px] overflow-y-auto">
+            <div className="flex flex-wrap justify-center gap-5">
+              {/* Card 1 */}
+              <div className="w-[300px] h-[400px] bg-blue-100 rounded-md shadow-md p-4 flex flex-col justify-between items-center">
+                <div>
+                  <h3 className="text-lg font-bold mb-2">Bíblia & Harpa - offline</h3>
+                  <p className="text-sm text-gray-700">Aplicativo mobile para acessar livros sagrados da bíblia, também está sendo implementado como funcionalidade principal a harpa.</p>
+                  <p className="pt-2">Status: Em desenvolvimento</p>
+                  <p>Github: Privado</p>
+                </div>
+                <button className="p-3 border-2 rounded-md shadow-md border-gray-800">Detalhes</button>
+              </div>
+              <div className="w-[300px] h-[400px] bg-blue-100 rounded-md shadow-md p-4 flex flex-col justify-between items-center">
+                <div>
+                  <h3 className="text-lg font-bold mb-2">Bíblia & Harpa - site</h3>
+                  <p className="text-sm text-gray-700">Aplicação web para download do app Bíblia & Harpa - offline</p>
+                  <p className="pt-2">Status: Finalizado</p>
+                  <p>Github: <a className="text-black underline hover:text-blue-950" href="https://github.com/SilvaRuan16/host-bible-site">Acessar Repositório</a></p>
+                  <p>Hospedagem: <a className="text-black underline hover:text-blue-950" href="https://host-bible-site.vercel.app/">Acessar Site</a></p>
+                </div>
+                <button className="p-3 border-2 rounded-md shadow-md border-gray-800">Detalhes</button>
+              </div>
             </div>
-            <hr />
-            <div className="mt-5">
-              <p className="text-center text-lg sm:text-xl">Status</p>
-              <ul className="p-3 mt-1">
-                <li className="p-3 flex flex-row justify-between text-sm sm:text-base">Finalizado <div className="w-2.5 h-2.5 rounded-md bg-green-500"></div></li>
-                <li className="p-3 flex flex-row justify-between text-sm sm:text-base">Em andamento <div className="w-2.5 h-2.5 rounded-md bg-yellow-500"></div></li>
-                <li className="p-3 flex flex-row justify-between text-sm sm:text-base">Em planejamento <div className="w-2.5 h-2.5 rounded-md bg-blue-500"></div></li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Main Content */}
-          <div className="bg-white sm:w-full p-3 m-3 rounded-md shadow-md">
-            {/* Conteúdo principal pode ser adicionado aqui */}
           </div>
         </div>
       </div>
